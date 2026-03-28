@@ -35,7 +35,7 @@ function App() {
   function send() {
     setstatus(true);
     axios
-      .post("/sendemail", {
+      .post("https://bulk-mail-livid.vercel.app/sendemail", {
         msg: msg,
         emailList: emailList,
       })

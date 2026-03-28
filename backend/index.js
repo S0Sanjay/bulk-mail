@@ -8,9 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+mongoose;
 mongoose
   .connect(
-    "mongodb+srv://sanjay:123@cluster0.ffepgr7.mongodb.net/?appName=Cluster0",
+    "mongodb+srv://sanjay:123@cluster0.ffepgr7.mongodb.net/passkey?appName=Cluster0",
   )
   .then(function () {
     console.log("Connected to DB");

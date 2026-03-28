@@ -3,8 +3,7 @@ import { useState } from "react";
 import * as XLSX from "xlsx";
 import History from "./History";
 
-// change this to your backend vercel url
-const BACKEND_URL = "https://bulk-mail-livid.vercel.app/sendemail";
+const BACKEND_URL = "https://bulk-mail-livid.vercel.app";
 
 function App() {
   const [subject, setsubject] = useState("");
@@ -83,7 +82,7 @@ function App() {
 
   return (
     <div>
-      {/* header */}
+      {}
       <div className="bg-blue-950 text-white text-center">
         <h1 className="text-2xl font-medium px-5 py-3">BulkMail</h1>
       </div>
@@ -94,7 +93,7 @@ function App() {
         </h1>
       </div>
 
-      {/* nav buttons */}
+      {}
       <div className="bg-blue-600 text-white text-center flex justify-center gap-4 py-2">
         <button
           onClick={() => setshowHistory(false)}
@@ -110,13 +109,13 @@ function App() {
         </button>
       </div>
 
-      {/* show history or send mail */}
+      {}
       {showHistory ? (
         <History backendUrl={BACKEND_URL} />
       ) : (
         <div className="bg-blue-400 flex flex-col items-center text-black px-5 py-5 min-h-screen">
 
-          {/* subject input */}
+          {}
           <input
             type="text"
             onChange={handlesubject}
@@ -125,7 +124,7 @@ function App() {
             placeholder="Enter email subject..."
           />
 
-          {/* message textarea */}
+          {}
           <textarea
             onChange={handlemsg}
             value={msg}
@@ -133,7 +132,7 @@ function App() {
             placeholder="Enter the email text...."
           ></textarea>
 
-          {/* file upload */}
+          {}
           <div className="mt-4 text-center">
             <p className="mb-2 font-medium">Upload Excel file with email list (.xlsx)</p>
             <input
@@ -148,7 +147,7 @@ function App() {
             Total Emails in the file: {emailList.length}
           </p>
 
-          {/* result message */}
+          {}
           {resultMsg && (
             <p className={`mt-3 font-medium px-4 py-2 rounded-md ${resultMsg.includes("Successfully") ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
               {resultMsg}
